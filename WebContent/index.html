@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Cache-Control" content="no-store" />
+<link rel="shortcut icon" href="favicon.ico"/>
+<title>Funcionários - Início</title>
+<link rel="stylesheet" type="text/css" href="resources/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="resources/css/style.css">
+</head>
+
+<body>
+	<header id="topo">
+		<nav class="navbar navbar-expand-lg navbar-light">
+			<a class="navbar-nav" href="https://www.hepta.com.br/">
+				<img src="..\WebContent\img\thumbmail.png" width="250">
+			</a>
+       	 <ul class="navbar-nav">
+       	    <li class="nav-item">
+				<a class="nav-link" href="#incluir">Incluir Funcionário</a>
+        	</li>
+        </ul>
+		</nav>
+	</header>
+<div class="container">
+	<div class="flex-container table text-center">
+		<div class="p-3 my-3 bg-danger text-white">
+			<h4>Lista dos Funcionários</h4>
+		</div>
+			<table class="list" id="funcionario-in-lista">
+				<thead>
+					<tr>
+						<th>Nome</th>
+						<th>Setor</th>
+						<th>Salário</th>
+						<th>E-mail</th>
+						<th>Idade</th>
+					</tr>
+				</thead>
+				<tbody>
+				</tbody>
+			</table>
+	</div>
+</div>
+	<table id="incluir">
+			<tr>
+				<td>
+					<form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+					<div>
+						<label>Nome</label>
+						<label id="NomeValidationError"></label>
+						<input id="FuncionarioNome" name="FuncionarioNome" type="text" required />
+					</div>
+		
+					<div>
+						<label>Setor</label>
+						<label id="SetorValidationError"></label>
+						<input id="FuncionarioSetorNome" name="FuncionarioSetorNome" type="text" required />
+					</div>
+		
+					<div>
+						<label>Salário</label>
+						<label id="SalarioValidationError" ></label>
+						<input id="FuncionarioSalario" name="FuncionarioSalario" type="text" required />
+					</div>
+		
+					<div>
+						<label>E-mail</label>
+						<label id="EmailValidationError" ></label>
+						<input id="FuncionarioEmail" name="FuncionarioEmail" type="email" required />
+					</div>
+		
+					<div>
+						<label>Idade</label>
+						<label id="IdadeValidationError" ></label>
+						<input id="FuncionarioIdade" name="FuncionarioIdade" type="number" required />
+					</div>
+		
+					<div class="form-action-buttons">
+						<input type="reset" value="Limpar">
+						<input type="submit" value="Enviar">
+					</div>
+		
+				  </form>
+				</td>
+			</tr>
+		</table>
+		<a class="btn-fixed" href="#topo">
+			<span>
+				<img src="img/seta.png" class="rounded-circle" width="20%"> 
+			</span>
+		</a>	
+	<script src="..\WebContent\resources\js\cadastro-de-funcionario.js"></script>
+</body>
+</html>
